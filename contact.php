@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title></title>
-	<link rel="stylesheet" type="text/css" href="homepage.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body style="background-color:white; width: 80%; margin: auto;">
 	<br>

@@ -17,50 +17,86 @@ body
     background-color: white;
 }
 
-.topnav {
-  overflow: hidden;
-  background-color:rgb(247, 221, 221);
+
+
+.navBar{
+    overflow: hidden;
+    background-color: #e6cab3;
+    background-image: linear-gradient(to right,#e6cab3, white, #e6cab3);
+    padding: 0 100px;
 }
-.topnav img{
-    margin-left: 90px;
+.navBar a{
+    float: right;
+    padding: 16px 10px;
+    color: #805850 ;
+    text-decoration: none;
+    border: 2px solid transparent;
+}
+.navBar a:hover{
+    border-bottom-color: #805850 ;
+}
+.navBar a.logo_icon{
+    float: left;
+    padding: 0;
+}
+.navBar a.logo_icon:hover{
+    border-bottom-color: transparent;
+}
+.navBar a.icon{
+    display: none;
 }
 
-.topnav a {
-  float: right;
-  color: maroon;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
+@media screen and (max-width:600px){
+    .navBar{padding: 0;}
+    .navBar a:hover{
+        border-bottom-color: transparent;
+    }
+    .navBar a:not(:last-child){display: none;}
+    .navBar a:last-child{float: left;}
+    .navBar a.icon{
+        display: block;
+        float: right;
+    }
+
+    .navBar.responsive{position: relative;}
+    .navBar.responsive a.icon{
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .navBar.responsive a{
+        display: block;
+        float: none;
+        text-align: left;
+    }
+    .navBar.responsive a.logo_icon{display: none;}
 }
 
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
-}
 .two span{
     font-size: 30px;
     font-weight: bold;
-    font-family: 'Lobster Two',cursive;
+     font-family:'Apple Chancery',cursive;
+}
 
 }
 .two
 {
     width:90%;
-    margin: 0 auto;
+    margin: auto;
     padding-top: 20px;
 }
 .two h1
 {
     font-size:17px;
-    width: 100%;
+    width: 90%;
+    margin: auto;
     color: brown;
     margin-bottom: 20px;
 }
 .imagesection
 {
-    width: 100%;
-    margin: 0px auto;
+    width: 90%;
+    margin:auto;
     display: flex;
     position: relative;
     border: 2px solid #eee;
@@ -123,6 +159,7 @@ body
     justify-content: center;           
      box-shadow: 14px 15px 13px -1px rgba(171,166,171,1);
 }
+
 .product img
 {
     margin: auto;
@@ -131,10 +168,14 @@ body
 
 
 }
+.product p{
+    height: 70px;
+}
 .product span
 {
     align-items: center;
     display: flex;
+    height: 50px;
     flex-wrap: wrap;
     justify-content: space-between;
 }
@@ -143,10 +184,34 @@ body
     font-size: 25px;
 }
 .product span p{
-    color: white;
-    background-color: brown;
-    padding: 8px;
-
+    white-space:nowrap;
+    position:relative;
+    margin:0 5px 0 10px;
+    display:inline-block;
+    height:25px;
+    border-radius: 0 5px 5px 0;
+    padding: 0 25px 0 15px;
+    background:brown;
+    border: 0 solid brown;
+    border-top-width:1px;
+    border-bottom-width:1px;
+    color:white;
+    line-height:23px;
+}
+.product span p:before{
+    position:absolute;
+    content:"\25CF";
+    color:white;
+    text-shadow: 0 0 1px #333;
+    font-size:11px;
+    line-height:0px;
+    text-indent:12px;
+    left:-15px;
+    width: 1px;
+    height:0px;
+    border-right:14px solid brown;
+    border-top:  13px solid transparent;
+    border-bottom:  13px solid transparent;
 }
 .logo{
     margin-top: 5px;
@@ -176,6 +241,9 @@ body
 .met{
     position: relative;
     margin-bottom: 0;
+    display: flex;
+    justify-content:space-around;
+
 }
 #label{
      margin: 10px;
@@ -198,7 +266,7 @@ body
     border-radius: 3px 3px 3px 3px;
 }
 .country, .num{
-    width: 49%;
+    flex-basis: 49%;
     border-radius: 3px 3px 3px 3px;
 }
 
@@ -300,4 +368,10 @@ body
     width: 30%;
   border-radius: 5px 5px 5px 5px;
   font-weight: bold;
+}
+.pagination{
+    width:60px;
+    margin:auto;
+    font-size: 17px;
+    display: flex;
 }

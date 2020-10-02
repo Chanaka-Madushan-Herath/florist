@@ -1,3 +1,13 @@
+function navBarFunction(){
+  var x = document.getElementById("navBarId");
+  if(x.className === "navBar"){
+      x.className += " responsive";
+  }else{
+      x.className = "navBar";
+  }
+}
+
+
 function validateForm() {
 	var  alertmessage="";
   var fields = ["name","mail","phonenum","message"]
@@ -22,6 +32,7 @@ if(alertmessage=="")
             alert(alertmessage);
         }
 }
+
 
 function price() {
         var price;
